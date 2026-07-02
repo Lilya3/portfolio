@@ -21,7 +21,7 @@ export const projects = [
     title: "ArgentBank",
     description:
       "Application bancaire avec authentification, gestion du profil utilisateur et centralisation de l’état avec Redux Toolkit.",
-    technologies: ["React", "Redux Toolkit", "API REST"],
+    technologies: ["React", "Redux Toolkit", "API REST", "Express", "MongoDB", "JWT", "Node.js"],
     image: argentBankImage,
     github: "https://github.com/Lilya3/ArgentBank",
     demo: null,
@@ -33,7 +33,7 @@ export const projects = [
     title: "Nina Carducci",
     description:
       "Optimisation des performances, du référencement naturel et de l’accessibilité du site d’une photographe.",
-    technologies: ["HTML", "CSS", "JavaScript", "SEO"],
+    technologies: ["HTML", "CSS", "JavaScript", "SEO", "Accessibilité", "Performance"],
     image: ninaCarducciImage,
     github: "https://github.com/Lilya3/Nina_Carducci",
     demo: "https://lilya3.github.io/Nina_Carducci/",
