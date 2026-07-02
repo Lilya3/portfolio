@@ -86,7 +86,7 @@ function Home() {
             to="/projets"
             className="home__section-link"
           >
-            Voir tous les projets →
+            Découvrir les projets <span className="code-arrow code-arrow--md space-arrow-left">&gt;</span>
           </Link>
         </div>
 

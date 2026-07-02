@@ -17,3 +17,53 @@ input,
 textarea {
   font-family: inherit;
 }
+
+.code-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  vertical-align: middle;
+  line-height: 1;
+
+  color: $color-accent;
+  font-weight: 700;
+
+  text-shadow: 0 0 18px rgba($color-accent, .35);
+}
+
+.code-arrow--sm {
+  font-size: 1rem;
+}
+
+.code-arrow--md {
+  font-size: 1.5rem;
+}
+
+.code-arrow--lg {
+  font-size: 2rem;
+}
+
+.code-arrow--xl {
+  font-size: clamp(4rem, 8vw, 7rem);
+}
+
+.space-arrow-left {
+  padding-left: 0.5rem;
+  transform: translateY(-1px);
+}
+
+.space-arrow-right {
+  padding-right: 0.5rem;
+  transform: translateY(-2px);
+}
+
+/*
+
+<span className="code-arrow code-arrow--md">&lt;</span>
+
+<span className="code-arrow code-arrow--md">&gt;</span>
+
+<span className="code-arrow code-arrow--xl">&lt;/&gt;</span>
+
+*/

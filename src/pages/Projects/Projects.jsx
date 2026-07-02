@@ -38,6 +38,13 @@ function Projects() {
     <section className="projects">
       <div className="projects__hero">
         <div>
+          <Link
+            to="/"
+            className="home__section-link"
+          >
+            <span className="code-arrow code-arrow--md space-arrow-right">&lt;</span> Revenir en arrière
+          </Link>
+
           <p className="projects__eyebrow">Portfolio</p>
 
           <h1>
@@ -98,16 +105,31 @@ function Projects() {
                 </ul>
 
                 <div className="projects__actions">
-                  <a href={project.github} target="_blank" rel="noreferrer">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noreferrer"
+                  >
                     Voir le code
                   </a>
 
                   <Link
                     to={`/projets/${project.slug}`}
-                    className="projects__button"
+                    className="projects__button projects__button--secondary"
                   >
-                    Voir le projet
+                    En savoir +
                   </Link>
+
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="projects__button"
+                    >
+                      Voir la démo
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
