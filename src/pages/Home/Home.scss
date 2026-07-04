@@ -2,7 +2,7 @@
 
 .home {
   width: 100%;
-  padding: 4rem 0 5rem;
+  padding: 5rem 0 5rem;
   overflow: hidden;
 }
 
@@ -11,6 +11,15 @@
   grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
   align-items: center;
   gap: 2.5rem;
+
+    > div > p:not(.home__eyebrow) {
+    max-width: 620px;
+    margin-top: 1.5rem;
+
+    color: $color-text-secondary;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
 }
 
 .home__content,
@@ -19,10 +28,20 @@
 }
 
 .home__eyebrow {
+  display: inline-flex;
   margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
 
   color: $color-accent-hover;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  background: rgba($color-accent, 0.08);
 }
 
 .home__title {

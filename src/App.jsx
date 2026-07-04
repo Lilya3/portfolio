@@ -5,6 +5,7 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
+import Skills from "./pages/Skills/Skills";
 
 function App() {
   return (
@@ -26,11 +27,22 @@ function App() {
         element={<ProjectDetails />}
         />
 
-        {/* Plus tard */}
-        {/* <Route path="/competences" element={<Skills />} /> */}
-        {/* <Route path="/parcours" element={<Journey />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
-      </Route>
+        <Route
+        path="/competences"
+        element={<Skills />}
+        />
+
+{/*         <Route
+        path="/parcours.:slug"
+        element={<Journey />}
+        />
+ */}
+{/*         <Route
+        path="/contact.:slug"
+        element={<Contact />}
+        />
+ */}
+              </Route>
     </Routes>
   );
 }

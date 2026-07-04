@@ -11,7 +11,7 @@ function Home() {
     <section className="home">
       <div className="home__hero">
         <div className="home__content">
-          <p className="home__eyebrow">Portfolio Développeuse Web</p>
+          <p className="home__eyebrow">Portfolio</p>
 
           <h1 className="home__title">
             Prénom Nom

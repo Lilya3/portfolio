@@ -38,13 +38,6 @@ function Projects() {
     <section className="projects">
       <div className="projects__hero">
         <div>
-          <Link
-            to="/"
-            className="home__section-link"
-          >
-            <span className="code-arrow code-arrow--md space-arrow-right">&lt;</span> Revenir en arrière
-          </Link>
-
           <p className="projects__eyebrow">Portfolio</p>
 
           <h1>

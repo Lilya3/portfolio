@@ -20,7 +20,7 @@
     }
   }
 
-  p {
+    > div > p:not(.projects__eyebrow) {
     max-width: 620px;
     margin-top: 1.5rem;
 
@@ -31,11 +31,20 @@
 }
 
 .projects__eyebrow {
+  display: inline-flex;
   margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
 
   color: $color-accent-hover;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  background: rgba($color-accent, 0.08);
 }
 
 .projects__visual {
