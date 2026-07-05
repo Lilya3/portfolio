@@ -99,21 +99,45 @@
   }
 }
 
+/* ==========================================
+   Media Queries
+========================================== */
+
 @media (max-width: 768px) {
   .footer__container {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 1.5rem;
   }
 
-  .footer__brand,
-  .footer__links,
-  .footer__bottom {
-    justify-self: center;
+  .footer__brand {
+    justify-self: start;
+
+    p {
+      display: none;
+    }
   }
 
-  .footer__links,
-  .footer__bottom {
+  .footer__links {
+    justify-self: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .footer__bottom {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .footer__top-button {
+    flex-shrink: 0;
   }
 }

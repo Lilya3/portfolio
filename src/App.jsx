@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 import Skills from "./pages/Skills/Skills";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -33,15 +34,15 @@ function App() {
         />
 
 {/*         <Route
-        path="/parcours.:slug"
+        path="/parcours"
         element={<Journey />}
         />
  */}
-{/*         <Route
-        path="/contact.:slug"
+        <Route
+        path="/contact"
         element={<Contact />}
         />
- */}
+
               </Route>
     </Routes>
   );

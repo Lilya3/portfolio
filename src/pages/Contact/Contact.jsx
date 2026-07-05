@@ -1,0 +1,101 @@
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaClock,
+  FaFileAlt,
+} from "react-icons/fa";
+
+import ContactForm from "../../components/ContactForm/ContactForm";
+import "./Contact.scss";
+
+function Contact() {
+  return (
+    <main className="contact-page">
+      <section className="contact-page__hero">
+        <div className="contact-page__intro">
+          <p className="contact-page__eyebrow">Contact</p>
+
+          <h1>
+            Travaillons <br />
+            ensemble<span>.</span>
+          </h1>
+
+          <p className="contact-page__description">
+            Je suis à la recherche d’un premier poste en développement front-end.
+            N’hésitez pas à me contacter, je serai ravie d’échanger avec vous.
+          </p>
+
+          <div className="contact-page__infos">
+            <div>
+              <FaEnvelope />
+              <p>
+                <span>Email</span>
+                lilya.dev.web@gmail.com
+              </p>
+            </div>
+
+            <div>
+              <FaMapMarkerAlt />
+              <p>
+                <span>Localisation</span>
+                Toulouse, France
+              </p>
+            </div>
+
+            <div>
+              <FaClock />
+              <p>
+                <span>Délai de réponse</span>
+                Sous 48h
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-page__form-card">
+          <h2>Envoyez-moi un message</h2>
+          <p>
+            Un projet, une opportunité ou simplement une question ? Écrivez-moi,
+            je vous répondrai avec plaisir.
+          </p>
+
+          <ContactForm />
+        </div>
+      </section>
+
+      <section className="contact-page__links" aria-labelledby="contact-links-title">
+        <h2 id="contact-links-title">Retrouvez-moi</h2>
+
+        <div className="contact-page__cards">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <FaGithub />
+            <h3>GitHub</h3>
+            <p>Découvrez mon code et mes projets open source.</p>
+          </a>
+
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+            <h3>LinkedIn</h3>
+            <p>Mon profil professionnel et mon parcours.</p>
+          </a>
+
+          <a href="mailto:lilya.dev.web@gmail.com">
+            <FaEnvelope />
+            <h3>Email</h3>
+            <p>Contact direct pour toute opportunité.</p>
+          </a>
+
+          <a href="/cv.pdf" target="_blank" rel="noreferrer">
+            <FaFileAlt />
+            <h3>CV</h3>
+            <p>Téléchargez mon CV au format PDF.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export default Contact;

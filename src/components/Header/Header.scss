@@ -112,8 +112,12 @@
   display: none;
 }
 
+/* ==========================================
+   Media Queries
+========================================== */
 
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
   
   .header__container {
     height: 88px;
@@ -126,7 +130,7 @@
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header__container {
     height: 80px;
   }
