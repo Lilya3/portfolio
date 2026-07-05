@@ -19,7 +19,7 @@ function Header() {
         <nav className="header__nav" aria-label="Navigation principale">
           <NavLink to="/projets" className="header__link">Projets</NavLink>
           <NavLink to="/competences" className="header__link">Compétences</NavLink>
-          <NavLink to="/parcours" className="header__link">Parcours</NavLink>
+          {/* <NavLink to="/parcours" className="header__link">Parcours</NavLink> */}
           <NavLink to="/contact" className="header__link">Contact</NavLink>
         </nav>
 
@@ -46,7 +46,7 @@ function Header() {
         <NavLink to="/" onClick={closeMenu}>Accueil</NavLink>
         <NavLink to="/projets" onClick={closeMenu}>Projets</NavLink>
         <NavLink to="/competences" onClick={closeMenu}>Compétences</NavLink>
-        <NavLink to="/parcours" onClick={closeMenu}>Parcours</NavLink>
+        {/* <NavLink to="/parcours" onClick={closeMenu}>Parcours</NavLink> */}
         <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
 
         <a

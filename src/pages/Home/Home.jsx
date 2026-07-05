@@ -110,9 +110,9 @@ function Home() {
             et contribuer à des projets concrets.
           </p>
 
-          <Link to="/parcours" className="home__about-button">
+          {/* <Link to="/parcours" className="home__about-button">
             En savoir plus sur mon parcours →
-          </Link>
+          </Link> */}
         </div>
 
         <div className="home__about-visual" aria-hidden="true">
