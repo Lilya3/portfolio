@@ -32,7 +32,6 @@ function Contact() {
 
           <p className="contact-page__description">
             Je suis à la recherche d’un premier poste en développement front-end.
-            N’hésitez pas à me contacter, je serai ravie d’échanger avec vous.
           </p>
 
           <div className="contact-page__infos">
@@ -40,7 +39,7 @@ function Contact() {
               <FaEnvelope />
               <p>
                 <span>Email</span>
-                lilya.dev.web@gmail.com
+                **
               </p>
             </div>
 
@@ -48,7 +47,7 @@ function Contact() {
               <FaMapMarkerAlt />
               <p>
                 <span>Localisation</span>
-                Toulouse, France
+                Cugnaux, France
               </p>
             </div>
 
@@ -65,8 +64,10 @@ function Contact() {
         <div className="contact-page__form-card">
           <h2>Envoyez-moi un message</h2>
           <p>
-            Un projet, une opportunité ou simplement une question ? Écrivez-moi,
-            je vous répondrai avec plaisir.
+            <p>
+              Une opportunité pour un premier poste en développement front-end ou un échange
+              autour de mon profil ? Écrivez-moi, je vous répondrai avec plaisir.
+            </p>
           </p>
 
           <ContactForm />
