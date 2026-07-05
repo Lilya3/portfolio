@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import Seo from "../../components/Seo/Seo";
 
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -73,8 +74,17 @@ function ProjectDetails() {
   );
 
   return (
+    <>
+      <Seo
+        title={`${project.title} | Lilya - Projet Front-End`}
+        description={`Découvrez le projet ${project.title}, réalisé par Lilya dans le cadre de son portfolio de développeuse front-end React.`}
+      />
+
     <section className="project-details">
-      <Link to="/projets" className="project-details__back">
+      <Link to="/projets" 
+      className="project-details__back" 
+      aria-label="Retourner à la page des projets"
+      >
         <span className="code-arrow code-arrow--md space-arrow-right">&lt;</span>
         Retour aux projets
       </Link>
@@ -100,8 +110,9 @@ function ProjectDetails() {
                 target="_blank"
                 rel="noreferrer"
                 className="project-details__button project-details__button--primary"
+                aria-label={`Voir le site du projet ${project.title}`}
               >
-                Voir le site
+                Site
               </a>
             )}
 
@@ -110,8 +121,9 @@ function ProjectDetails() {
               target="_blank"
               rel="noreferrer"
               className="project-details__button project-details__button--secondary"
+              aria-label={`Voir le code GitHub du projet ${project.title}`}
             >
-              Voir le code
+              Code
             </a>
           </div>
         </div>
@@ -120,6 +132,8 @@ function ProjectDetails() {
           <img
             src={project.image}
             alt={`Capture d'écran du projet ${project.title}`}
+            loading="eager"
+            decoding="async"
           />
         </div>
       </section>
@@ -223,19 +237,27 @@ function ProjectDetails() {
               type="button"
               className="project-details__gallery-item"
               onClick={() => setSelectedImageIndex(index)}
+              aria-label={`Agrandir l'aperçu ${index + 1} du projet ${project.title}`}
             >
-              <img
+             <img
                 src={image}
                 alt={`Aperçu ${index + 1} du projet ${project.title}`}
+                loading="lazy"
+                decoding="async"
               />
 
-              <span>Agrandir l’aperçu</span>
+              <span>Agrandir</span>
             </button>
           ))}
         </div>
 
         {selectedImageIndex !== null && (
-          <div className="project-details__lightbox">
+          <div
+            className="project-details__lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Aperçu agrandi du projet ${project.title}`}
+          >
             <button
               type="button"
               className="project-details__lightbox-close"
@@ -257,6 +279,7 @@ function ProjectDetails() {
             <img
               src={project.gallery[selectedImageIndex]}
               alt={`Aperçu agrandi ${selectedImageIndex + 1} du projet ${project.title}`}
+              decoding="async"
             />
 
             <button
@@ -271,6 +294,7 @@ function ProjectDetails() {
         )}
       </section>
     </section>
+  </>
   );
 }
 

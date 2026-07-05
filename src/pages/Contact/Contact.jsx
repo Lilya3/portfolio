@@ -9,15 +9,23 @@ import {
 
 import ContactForm from "../../components/ContactForm/ContactForm";
 import "./Contact.scss";
+import Seo from "../../components/Seo/Seo";
 
 function Contact() {
   return (
-    <main className="contact-page">
+
+    <>
+      <Seo
+        title="Contact | Lilya - Développeuse Front-End React"
+        description="Contactez Lilya pour échanger autour d'une opportunité professionnelle, d'un projet web ou d'une collaboration en développement front-end."
+      />
+
+    <section className="contact-page" aria-labelledby="contact-title">
       <section className="contact-page__hero">
         <div className="contact-page__intro">
           <p className="contact-page__eyebrow">Contact</p>
 
-          <h1>
+          <h1 id="contact-title">
             Travaillons <br />
             ensemble<span>.</span>
           </h1>
@@ -94,7 +102,8 @@ function Contact() {
           </a>
         </div>
       </section>
-    </main>
+    </section>
+  </>
   );
 }
 

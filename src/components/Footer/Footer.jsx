@@ -29,21 +29,26 @@ function Footer() {
             href="https://github.com/Lilya3"
             target="_blank"
             rel="noreferrer"
+            aria-label="Voir mon profil GitHub"
           >
             <FaGithub />
             <span>GitHub</span>
           </a>
 
           <a
-            href="TON_LIEN_LINKEDIN"
+            href=""
             target="_blank"
             rel="noreferrer"
+            aria-label="Voir mon profil LinkedIn"
           >
             <FaLinkedin />
             <span>LinkedIn</span>
           </a>
 
-          <a href="mailto:TON_EMAIL">
+          <a
+            href="mailto:"
+            aria-label="M'envoyer un email"
+          >
             <FaEnvelope />
             <span>Email</span>
           </a>

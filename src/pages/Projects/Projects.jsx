@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Seo from "../../components/Seo/Seo";
 
 import { projects } from "../../data/projects";
 
@@ -35,6 +36,13 @@ function Projects() {
         );
 
   return (
+
+    <>
+      <Seo
+        title="Projets | Lilya - Développeuse Front-End React"
+        description="Découvrez les projets web réalisés par Lilya : applications React, intégration web, optimisation SEO et interfaces modernes."
+      />
+
     <section className="projects">
       <div className="projects__hero">
         <div>
@@ -65,6 +73,7 @@ function Projects() {
               activeFilter === filter ? "projects__filter--active" : ""
             }`}
             onClick={() => setActiveFilter(filter)}
+            aria-pressed={activeFilter === filter}
           >
             {filter}
           </button>
@@ -83,6 +92,8 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={`Capture d'écran du projet ${project.title}`}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -102,13 +113,15 @@ function Projects() {
                     href={project.github} 
                     target="_blank" 
                     rel="noreferrer"
+                    aria-label={`Voir le code GitHub du projet ${project.title}`}
                   >
-                    Voir le code
+                    Code
                   </a>
 
                   <Link
                     to={`/projets/${project.slug}`}
                     className="projects__button projects__button--secondary"
+                    aria-label={`En savoir plus sur le projet ${project.title}`}
                   >
                     En savoir +
                   </Link>
@@ -119,8 +132,9 @@ function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       className="projects__button"
+                      aria-label={`Voir la démo du projet ${project.title}`}
                     >
-                      Voir la démo
+                      Démo
                     </a>
                   )}
                 </div>
@@ -130,6 +144,7 @@ function Projects() {
         )}
       </div>
     </section>
+  </>
   );
 }
 

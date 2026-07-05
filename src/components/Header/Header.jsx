@@ -24,7 +24,7 @@ function Header() {
         </nav>
 
         <div className="header__actions">
-          <a className="header__button" href="/cv.pdf" target="_blank" rel="noreferrer">
+          <a className="header__button" href="" target="_blank" rel="noreferrer">
             Voir mon CV
           </a>
         </div>

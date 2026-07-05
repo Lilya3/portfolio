@@ -5,8 +5,10 @@ function ProjectCard({ project }) {
     <article className="project-card">
       <div className="project-card__image">
         <img
-        src={project.image}
-        alt={`Aperçu du projet ${project.title}`}
+          src={project.image}
+          alt={`Aperçu du projet ${project.title}`}
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -29,22 +31,24 @@ function ProjectCard({ project }) {
         <div className="project-card__actions">
           {project.demo && (
             <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="project-card__link project-card__link--primary"
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card__link project-card__link--primary"
+              aria-label={`Voir le site du projet ${project.title}`}
             >
-              Voir le site
+              Site
             </a>
           )}
 
           <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          className="project-card__link project-card__link--secondary"
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="project-card__link project-card__link--secondary"
+            aria-label={`Voir le code GitHub du projet ${project.title}`}
           >
-            Voir le code
+            Code
           </a>
         </div>
       </div>

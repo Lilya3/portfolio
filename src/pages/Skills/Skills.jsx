@@ -4,11 +4,19 @@ import {
   methodologySteps,
 } from "../../data/skills";
 import { Monitor, ShieldCheck } from "../../data/icons";
+import Seo from "../../components/Seo/Seo";
 
 import "./Skills.scss";
 
 function Skills() {
   return (
+
+    <>
+      <Seo
+        title="Compétences | Lilya - Développeuse Front-End React"
+        description="Découvrez les compétences techniques de Lilya en développement front-end : React, JavaScript, Sass, accessibilité, responsive design et méthodologie projet."
+      />
+
     <section className="skills">
       <div className="skills__hero">
         <div>
@@ -148,6 +156,7 @@ function Skills() {
         })}
       </div>
     </section>
+  </>
   );
 }
 
