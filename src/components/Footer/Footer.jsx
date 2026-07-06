@@ -36,7 +36,7 @@ function Footer() {
           </a>
 
           <a
-            href=""
+            href="https://www.linkedin.com/in/alice-lendormi-5073b5420"
             target="_blank"
             rel="noreferrer"
             aria-label="Voir mon profil LinkedIn"
@@ -46,7 +46,7 @@ function Footer() {
           </a>
 
           <a
-            href="mailto:"
+            href="mailto:alicelendormi@gmail.com"
             aria-label="M'envoyer un email"
           >
             <FaEnvelope />

@@ -88,7 +88,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/alice-lendormi-5073b5420"
             target="_blank"
             rel="noreferrer"
             aria-label="Voir mon profil LinkedIn"
@@ -99,7 +99,7 @@ function Contact() {
           </a>
 
           <a
-            href="mailto:lilya.dev.web@gmail.com"
+            href="mailto:alicelendormi@gmail.com"
             aria-label="M'envoyer un email"
           >
             <FaEnvelope />
