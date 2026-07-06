@@ -107,7 +107,7 @@ export const projects = [
 
     github: "https://github.com/Lilya3/Kasa",
 
-    demo: null,
+    site: "https://kasa-blue-gamma.vercel.app/",
 
     featured: true,
   },
@@ -212,7 +212,7 @@ export const projects = [
     
     github: "https://github.com/Lilya3/ArgentBank",
     
-    demo: null,
+    site: null,
     
     featured: true,
   },
@@ -307,7 +307,7 @@ export const projects = [
     
     github: "https://github.com/Lilya3/Nina_Carducci",
     
-    demo: "https://lilya3.github.io/Nina_Carducci/",
+    site: "https://nina-carducci-eight.vercel.app/",
     
     featured: true,
   },

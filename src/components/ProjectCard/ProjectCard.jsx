@@ -29,9 +29,9 @@ function ProjectCard({ project }) {
         </ul>
 
         <div className="project-card__actions">
-          {project.demo && (
+          {project.site && (
             <a
-              href={project.demo}
+              href={project.site}
               target="_blank"
               rel="noreferrer"
               className="project-card__link project-card__link--primary"

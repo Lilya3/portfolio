@@ -104,9 +104,9 @@ function ProjectDetails() {
           </ul>
 
           <div className="project-details__actions">
-            {project.demo && (
+            {project.site && (
               <a
-                href={project.demo}
+                href={project.site}
                 target="_blank"
                 rel="noreferrer"
                 className="project-details__button project-details__button--primary"

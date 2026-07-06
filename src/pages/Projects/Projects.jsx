@@ -126,15 +126,15 @@ function Projects() {
                     En savoir +
                   </Link>
 
-                  {project.demo && (
+                  {project.site && (
                     <a
-                      href={project.demo}
+                      href={project.site}
                       target="_blank"
                       rel="noreferrer"
                       className="projects__button"
-                      aria-label={`Voir la démo du projet ${project.title}`}
+                      aria-label={`Voir le site du projet ${project.title}`}
                     >
-                      Démo
+                      Site
                     </a>
                   )}
                 </div>
