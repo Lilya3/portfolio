@@ -262,7 +262,6 @@ function ProjectDetails() {
             <button
               type="button"
               className="project-details__lightbox-close"
-              onClick={closeLightbox}
               onClick={(event) => {
                 event.stopPropagation();
                 closeLightbox();
