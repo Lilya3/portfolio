@@ -26,9 +26,9 @@ function Header() {
         <div className="header__actions">
           <a
             className="header__button"
-            href="/cv.pdf"
+            href="/cv/cv.pdf"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="Voir mon CV au format PDF"
           >
             Voir mon CV
@@ -60,9 +60,9 @@ function Header() {
 
         <a
           className="header__mobile-cv"
-          href="/cv.pdf"
+          href="/cv/cv.pdf"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           onClick={closeMenu}
           aria-label="Voir mon CV au format PDF"
         >

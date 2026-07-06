@@ -108,7 +108,8 @@ function Contact() {
           </a>
 
           <a
-            href="/cv.pdf"
+            href="/public/cv/cv.pdf"
+            download
             target="_blank"
             rel="noreferrer"
             aria-label="Télécharger mon CV au format PDF"
