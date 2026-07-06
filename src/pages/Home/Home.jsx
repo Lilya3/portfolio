@@ -59,7 +59,7 @@ function Home() {
 
               <pre>
   {`const developer = {
-    name: "Lilya",
+    name: "Lilya3",
     role: "Front-End",
     stack: ["React", "JS", "Sass"],
   };`}

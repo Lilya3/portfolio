@@ -50,7 +50,7 @@ function Footer() {
 
         <div className="footer__bottom">
 
-          <p>© 2026 Lilya. Tous droits réservés.</p>
+          <p>© 2026 Alice Lendormi</p>
 
           <button
             type="button"
