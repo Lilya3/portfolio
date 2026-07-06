@@ -88,7 +88,14 @@ function Skills() {
                       </div>
 
                       <div className="skills-card__level">
-                        <div className="skills-card__bar">
+                        <div
+                          className="skills-card__bar"
+                          role="progressbar"
+                          aria-label={`${skill.name} : ${skill.level}%`}
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow={skill.level}
+                        >
                           <span style={{ width: `${skill.level}%` }} />
                         </div>
 

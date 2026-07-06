@@ -12,7 +12,7 @@ function Header() {
     <header className="header">
       <div className="header__container">
         <NavLink to="/" className="header__logo" aria-label="Retour à l'accueil">
-          <span>&lt;/&gt;</span>
+          <span aria-hidden="true">&lt;/&gt;</span>
           Lilya
         </NavLink>
 
@@ -24,22 +24,31 @@ function Header() {
         </nav>
 
         <div className="header__actions">
-          <a className="header__button" href="" target="_blank" rel="noreferrer">
+          <a
+            className="header__button"
+            href="/cv.pdf"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Voir mon CV au format PDF"
+          >
             Voir mon CV
           </a>
         </div>
 
         <button
+          type="button"
           className="header__burger"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
 
       <nav
+        id="mobile-navigation"
         className={`header__mobile-nav ${isMenuOpen ? "header__mobile-nav--open" : ""}`}
         aria-label="Navigation mobile"
       >
@@ -55,6 +64,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
           onClick={closeMenu}
+          aria-label="Voir mon CV au format PDF"
         >
           Voir mon CV
         </a>

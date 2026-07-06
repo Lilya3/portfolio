@@ -16,7 +16,7 @@ function Footer() {
 
         <div className="footer__brand">
           <Link to="/" className="footer__logo">
-            <span className="code-arrow code-arrow--md">&lt;/&gt;</span>
+            <span className="code-arrow code-arrow--md" aria-hidden="true">&lt;/&gt;</span>
             <span>Lilya</span>
           </Link>
 

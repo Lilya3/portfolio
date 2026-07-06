@@ -64,10 +64,8 @@ function Contact() {
         <div className="contact-page__form-card">
           <h2>Envoyez-moi un message</h2>
           <p>
-            <p>
-              Une opportunité pour un premier poste en développement front-end ou un échange
-              autour de mon profil ? Écrivez-moi, je vous répondrai avec plaisir.
-            </p>
+            Une opportunité pour un premier poste en développement front-end ou un échange
+            autour de mon profil ? Écrivez-moi, je vous répondrai avec plaisir.
           </p>
 
           <ContactForm />
@@ -78,25 +76,43 @@ function Contact() {
         <h2 id="contact-links-title">Retrouvez-moi</h2>
 
         <div className="contact-page__cards">
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/Lilya3"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Voir mon profil GitHub"
+          >
             <FaGithub />
             <h3>GitHub</h3>
             <p>Découvrez mon code et mes projets open source.</p>
           </a>
 
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Voir mon profil LinkedIn"
+          >
             <FaLinkedinIn />
             <h3>LinkedIn</h3>
             <p>Mon profil professionnel et mon parcours.</p>
           </a>
 
-          <a href="mailto:lilya.dev.web@gmail.com">
+          <a
+            href="mailto:lilya.dev.web@gmail.com"
+            aria-label="M'envoyer un email"
+          >
             <FaEnvelope />
             <h3>Email</h3>
             <p>Contact direct pour toute opportunité.</p>
           </a>
 
-          <a href="/cv.pdf" target="_blank" rel="noreferrer">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Télécharger mon CV au format PDF"
+          >
             <FaFileAlt />
             <h3>CV</h3>
             <p>Téléchargez mon CV au format PDF.</p>

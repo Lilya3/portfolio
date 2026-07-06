@@ -1,16 +1,104 @@
+import { useState } from "react";
+
 import "./ContactForm.scss";
 
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((currentData) => ({
+      ...currentData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const mailSubject = encodeURIComponent(formData.subject);
+    const mailBody = encodeURIComponent(
+      `Nom : ${formData.name}\nEmail : ${formData.email}\n\nMessage :\n${formData.message}`
+    );
+
+    window.location.href = `mailto:lilya.dev.web@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+  };
+
   return (
-    <form className="contact-form">
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form__row">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
+        <div className="contact-form__field">
+          <label className="sr-only" htmlFor="contact-name">
+            Votre nom
+          </label>
+
+          <input
+            id="contact-name"
+            type="text"
+            name="name"
+            placeholder="Votre nom"
+            autoComplete="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="contact-form__field">
+          <label className="sr-only" htmlFor="contact-email">
+            Votre email
+          </label>
+
+          <input
+            id="contact-email"
+            type="email"
+            name="email"
+            placeholder="Votre email"
+            autoComplete="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
 
-      <input type="text" name="subject" placeholder="Sujet" required />
+      <div className="contact-form__field">
+        <label className="sr-only" htmlFor="contact-subject">
+          Sujet
+        </label>
 
-      <textarea name="message" placeholder="Votre message" required />
+        <input
+          id="contact-subject"
+          type="text"
+          name="subject"
+          placeholder="Sujet"
+          autoComplete="off"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="contact-form__field">
+        <label className="sr-only" htmlFor="contact-message">
+          Votre message
+        </label>
+
+        <textarea
+          id="contact-message"
+          name="message"
+          placeholder="Votre message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
       <button type="submit">
         Envoyer le message

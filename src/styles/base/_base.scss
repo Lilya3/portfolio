@@ -67,3 +67,51 @@ textarea {
 <span className="code-arrow code-arrow--xl">&lt;/&gt;</span>
 
 */
+
+
+
+
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 0.75rem;
+
+  color: $color-text-primary;
+  background: $color-accent;
+
+  font-weight: 700;
+
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+:focus-visible {
+  outline: 3px solid $color-accent-hover;
+  outline-offset: 4px;
+}

@@ -8,9 +8,13 @@ import "./Layout.scss";
 function Layout() {
   return (
     <div className="layout">
+      <a href="#main-content" className="skip-link">
+        Aller au contenu principal
+      </a>
+
       <Header />
 
-      <main className="layout__main">
+      <main id="main-content" className="layout__main">
         <Outlet />
       </main>
 

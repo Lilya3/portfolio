@@ -257,11 +257,16 @@ function ProjectDetails() {
             role="dialog"
             aria-modal="true"
             aria-label={`Aperçu agrandi du projet ${project.title}`}
+            onClick={closeLightbox}
           >
             <button
               type="button"
               className="project-details__lightbox-close"
               onClick={closeLightbox}
+              onClick={(event) => {
+                event.stopPropagation();
+                closeLightbox();
+              }}
               aria-label="Fermer l'image"
             >
               ×
@@ -270,7 +275,10 @@ function ProjectDetails() {
             <button
               type="button"
               className="project-details__lightbox-nav project-details__lightbox-nav--prev"
-              onClick={showPreviousImage}
+              onClick={(event) => {
+                event.stopPropagation();
+                showPreviousImage();
+              }}
               aria-label="Image précédente"
             >
               ‹
@@ -280,12 +288,16 @@ function ProjectDetails() {
               src={project.gallery[selectedImageIndex]}
               alt={`Aperçu agrandi ${selectedImageIndex + 1} du projet ${project.title}`}
               decoding="async"
+              onClick={(event) => event.stopPropagation()}
             />
 
             <button
               type="button"
               className="project-details__lightbox-nav project-details__lightbox-nav--next"
-              onClick={showNextImage}
+              onClick={(event) => {
+                event.stopPropagation();
+                showNextImage();
+              }}
               aria-label="Image suivante"
             >
               ›
