@@ -5,8 +5,6 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-
 import "./Footer.scss";
 
 function Footer() {
@@ -15,11 +13,6 @@ function Footer() {
       <div className="footer__container">
 
         <div className="footer__brand">
-          <Link to="/" className="footer__logo">
-            <span className="code-arrow code-arrow--md" aria-hidden="true">&lt;/&gt;</span>
-            <span>Lilya</span>
-          </Link>
-
           <p>Développeuse Front-End React</p>
         </div>
 

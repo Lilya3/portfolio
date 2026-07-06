@@ -13,7 +13,6 @@ function Header() {
       <div className="header__container">
         <NavLink to="/" className="header__logo" aria-label="Retour à l'accueil">
           <span aria-hidden="true">&lt;/&gt;</span>
-          Lilya
         </NavLink>
 
         <nav className="header__nav" aria-label="Navigation principale">

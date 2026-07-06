@@ -31,7 +31,8 @@ function Contact() {
           </h1>
 
           <p className="contact-page__description">
-            Je suis à la recherche d’un premier poste en développement front-end.
+            Je recherche un premier poste en développement front-end, 
+            idéalement en télétravail complet ou hybride, dans un environnement compatible avec ma RQTH.
           </p>
 
           <div className="contact-page__infos">
@@ -39,7 +40,7 @@ function Contact() {
               <FaEnvelope />
               <p>
                 <span>Email</span>
-                **
+                alicelendormi@gmail.com
               </p>
             </div>
 
@@ -47,7 +48,7 @@ function Contact() {
               <FaMapMarkerAlt />
               <p>
                 <span>Localisation</span>
-                Cugnaux, France
+                Cugnaux, proche Toulouse, France
               </p>
             </div>
 

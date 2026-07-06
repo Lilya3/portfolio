@@ -21,7 +21,7 @@ function Home() {
             <p className="home__eyebrow">Portfolio</p>
 
             <h1 className="home__title">
-              Lilya
+              Alice Lendormi
               <span>développeuse Front-End React</span>
             </h1>
 
