@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 
 .projects {
   padding: 5rem 0 6rem;
@@ -24,9 +25,9 @@
     max-width: 620px;
     margin-top: 1.5rem;
 
-    color: $color-text-secondary;
+    @include text-muted(1.8);
+
     font-size: 1.1rem;
-    line-height: 1.8;
   }
 }
 
@@ -48,11 +49,9 @@
 }
 
 .projects__visual {
-  min-height: 260px;
+  @include flex-center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 260px;
 
   border-radius: $radius-lg;
 
@@ -162,19 +161,14 @@
 .projects__subtitle {
   margin-top: 1rem;
 
-  color: $color-text-secondary;
-  line-height: 1.7;
+  @include text-muted(1.7);
 }
 
 .projects__tags {
-  margin: 1.5rem 0 0;
-  padding: 0;
+  @include tag-list;
 
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 1.5rem;
   gap: 0.6rem;
-
-  list-style: none;
 
   li {
     padding: 0.45rem 0.8rem;
@@ -230,7 +224,7 @@
    Media Queries
 ========================================== */
 
-@media (max-width: 1024px) {
+@include respond(tablet) {
   .projects__hero,
   .projects__item {
     grid-template-columns: 1fr;
@@ -250,7 +244,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include respond(mobile) {
   .projects {
     padding: 3rem 0 4rem;
   }
@@ -305,7 +299,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@include respond(small) {
   .projects__item {
     padding: 1rem;
   }
