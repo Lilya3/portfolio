@@ -1,0 +1,67 @@
+@use "../../../../styles/abstracts/variables" as *;
+
+.project-details__code-card {
+  overflow: hidden;
+  padding: 1.5rem;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  background: rgba($color-card, 0.65);
+
+  pre {
+    margin: 0;
+    max-height: 320px;
+    padding: 0.25rem 0.4rem 0.9rem 0;
+    overflow: auto;
+
+    color: $color-text-secondary;
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba($color-accent, 0.75) rgba($color-bg-primary, 0.85);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 999px;
+      background: rgba($color-bg-primary, 0.85);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 1px solid rgba($color-bg-primary, 0.85);
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        $color-accent,
+        $color-accent-hover
+      );
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-accent-hover;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+
+  code {
+    font-family: monospace;
+  }
+}
+
+.project-details__code-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid $color-border;
+
+  color: $color-text-primary;
+  font-weight: 600;
+}

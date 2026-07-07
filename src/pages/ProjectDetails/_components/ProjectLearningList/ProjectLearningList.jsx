@@ -1,3 +1,5 @@
+import "./ProjectLearningList.scss"
+
 function ProjectLearningList({ learnings }) {
   return (
     <div className="project-details__learnings">

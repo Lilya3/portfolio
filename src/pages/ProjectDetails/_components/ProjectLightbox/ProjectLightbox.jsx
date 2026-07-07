@@ -1,3 +1,5 @@
+import "./ProjectLightbox.scss"
+
 function ProjectLightbox({
   image,
   imageIndex,

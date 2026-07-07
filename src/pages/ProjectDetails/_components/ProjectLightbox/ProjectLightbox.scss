@@ -1,0 +1,90 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.project-details__lightbox {
+  @include flex-center;
+
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+
+  padding: 2rem;
+
+  background: rgba($color-bg-primary, 0.92);
+  backdrop-filter: blur(10px);
+
+  img {
+    max-width: min(1200px, 90vw);
+    max-height: 85vh;
+
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+
+    object-fit: contain;
+    box-shadow: $shadow-card;
+  }
+}
+
+.project-details__lightbox-close,
+.project-details__lightbox-nav {
+  @include flex-center;
+
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid $color-border;
+  border-radius: 50%;
+
+  background: rgba($color-card, 0.85);
+  color: $color-text-primary;
+
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent-hover;
+  }
+}
+
+.project-details__lightbox-close {
+  top: 2rem;
+  right: 2rem;
+}
+
+.project-details__lightbox-nav--prev {
+  left: 2rem;
+}
+
+.project-details__lightbox-nav--next {
+  right: 2rem;
+}
+
+@include respond(mobile) {
+  .project-details__lightbox {
+    padding: 1rem;
+  }
+
+  .project-details__lightbox-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .project-details__lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+
+  .project-details__lightbox-nav--prev {
+    left: 1rem;
+  }
+
+  .project-details__lightbox-nav--next {
+    right: 1rem;
+  }
+}

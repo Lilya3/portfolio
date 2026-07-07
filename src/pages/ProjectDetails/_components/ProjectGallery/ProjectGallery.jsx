@@ -1,3 +1,5 @@
+import "./ProjectGallery.scss"
+
 function ProjectGallery({ images, projectTitle, onSelectImage }) {
   return (
     <section className="project-details__gallery">

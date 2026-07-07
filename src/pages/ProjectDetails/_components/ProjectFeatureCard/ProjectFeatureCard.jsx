@@ -1,3 +1,5 @@
+import "./ProjectFeatureCard.scss";
+
 function ProjectFeatureCard({ feature }) {
   return (
     <article className="project-details__feature-card">

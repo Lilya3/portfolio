@@ -1,3 +1,5 @@
+import "./ProjectInfoRow.scss";
+
 function ProjectInfoRow({ label, value }) {
   if (!value) {
     return null;

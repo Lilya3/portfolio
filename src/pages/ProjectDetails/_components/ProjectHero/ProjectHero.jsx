@@ -1,3 +1,5 @@
+import "./ProjectHero.scss";
+
 function ProjectHero({ project }) {
   return (
     <section className="project-details__hero">

@@ -1,0 +1,34 @@
+@use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/mixins" as *;
+
+.project-details__info-row {
+  padding: 0.9rem 0;
+
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  span {
+    color: $color-accent-hover;
+    font-weight: 600;
+  }
+
+  strong {
+    color: $color-text-secondary;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+@include respond(mobile) {
+  .project-details__info-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}

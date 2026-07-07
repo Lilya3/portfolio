@@ -2,6 +2,8 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-markup";
+import "./ProjectCodeBlock.scss";
+
 
 function ProjectCodeBlock({ title, code }) {
   const isHtmlSnippet = title.toLowerCase().includes("html");
