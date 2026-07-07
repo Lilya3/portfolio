@@ -1,0 +1,184 @@
+@use "./variables" as *;
+
+// Breakpoints
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+// Layout
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin page-spacing {
+  padding: 4rem 0 6rem;
+
+  @include respond(mobile) {
+    padding: 3rem 0 4rem;
+  }
+}
+
+@mixin section-spacing {
+  padding: 5rem 0;
+
+  @include respond(mobile) {
+    padding: 3.5rem 0;
+  }
+}
+
+@mixin auto-grid($min: 260px, $gap: 1.5rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}
+
+// Cards
+@mixin glass-card($radius: $radius-md, $opacity: 0.65) {
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: rgba($color-card, $opacity);
+  box-shadow: $shadow-card;
+}
+
+@mixin hover-lift {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($color-accent, 0.45);
+  }
+}
+
+// Text
+@mixin eyebrow {
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+
+  background: rgba($color-accent, 0.08);
+  color: $color-accent-hover;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@mixin text-muted($line-height: 1.7) {
+  color: $color-text-secondary;
+  line-height: $line-height;
+}
+
+//Tags
+@mixin tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.45rem 0.75rem;
+
+  border: 1px solid $color-border;
+  border-radius: 999px;
+
+  color:$color-accent-hover;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@mixin tag-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  list-style: none;
+}
+
+// Buttons / links
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: $radius-sm;
+
+  font-weight: 600;
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+}
+
+@mixin button-primary {
+  @include button-base;
+
+  border: 1px solid transparent;
+  background: $color-accent;
+  color: $color-text-primary;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent-hover;
+  }
+}
+
+// Icons
+@mixin icon-bubble($size: 3rem) {
+  @include flex-center;
+
+  width: $size;
+  height: $size;
+
+  border-radius: 50%;
+
+  background: rgba($color-accent, 0.14);
+  color: $color-accent-hover;
+}
