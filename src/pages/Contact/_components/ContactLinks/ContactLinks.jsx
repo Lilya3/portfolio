@@ -1,6 +1,5 @@
 import {
   FaGithub,
-  FaLinkedinIn,
   FaEnvelope,
   FaFileAlt,
 } from "react-icons/fa";
@@ -12,14 +11,6 @@ const contactLinks = [
     href: "https://github.com/Lilya3",
     ariaLabel: "Voir mon profil GitHub",
     icon: FaGithub,
-    isExternal: true,
-  },
-  {
-    title: "LinkedIn",
-    description: "Mon profil professionnel et mon parcours.",
-    href: "https://www.linkedin.com/in/alice-lendormi-5073b5420",
-    ariaLabel: "Voir mon profil LinkedIn",
-    icon: FaLinkedinIn,
     isExternal: true,
   },
   {

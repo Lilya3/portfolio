@@ -125,8 +125,11 @@
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.2rem;
+
+    max-width: 900px;
+    margin: 0 auto;
 
     a {
       min-height: 150px;
@@ -177,6 +180,7 @@
     &__cards {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+      max-width: 680px;
 
       a {
         @include flex-center;

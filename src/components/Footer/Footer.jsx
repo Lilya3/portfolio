@@ -1,6 +1,5 @@
 import {
   FaGithub,
-  FaLinkedin,
   FaEnvelope,
   FaArrowUp,
 } from "react-icons/fa";
@@ -26,16 +25,6 @@ function Footer() {
           >
             <FaGithub />
             <span>GitHub</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/alice-lendormi-5073b5420"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Voir mon profil LinkedIn"
-          >
-            <FaLinkedin />
-            <span>LinkedIn</span>
           </a>
 
           <a
