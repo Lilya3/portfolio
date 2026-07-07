@@ -5,6 +5,7 @@ import {
 } from "../../data/skills";
 import { Monitor, ShieldCheck } from "../../data/icons";
 import Seo from "../../components/Seo/Seo";
+import SkillCard from "../../components/SkillCard/SkillCard";
 
 import "./Skills.scss";
 
@@ -56,58 +57,9 @@ function Skills() {
       </div>
 
       <div className="skills__grid">
-        {skillGroups.map((group) => {
-          const GroupIcon = group.icon;
-
-          return (
-            <article className="skills-card" key={group.title}>
-              <div className="skills-card__header">
-                <h3>
-                  <span className="skills-card__group-icon">
-                    <GroupIcon />
-                  </span>
-
-                  {group.title}
-                </h3>
-
-                <p>{group.description}</p>
-              </div>
-
-              <ul className="skills-card__list">
-                {group.skills.map((skill) => {
-                  const Icon = skill.icon;
-
-                  return (
-                    <li className="skills-card__item" key={skill.name}>
-                      <div className="skills-card__skill">
-                        <span className={`skills-card__icon ${skill.className}`}>
-                          <Icon />
-                        </span>
-
-                        <span>{skill.name}</span>
-                      </div>
-
-                      <div className="skills-card__level">
-                        <div
-                          className="skills-card__bar"
-                          role="progressbar"
-                          aria-label={`${skill.name} : ${skill.level}%`}
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                          aria-valuenow={skill.level}
-                        >
-                          <span style={{ width: `${skill.level}%` }} />
-                        </div>
-
-                        <strong>{skill.level}%</strong>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </article>
-          );
-        })}
+        {skillGroups.map((group) => (
+          <SkillCard group={group} key={group.title} />
+        ))}
       </div>
 
       <div className="skills__section-title skills__section-title--spaced">
