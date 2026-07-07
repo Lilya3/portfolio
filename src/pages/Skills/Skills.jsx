@@ -5,9 +5,9 @@ import {
 } from "../../data/skills";
 import { Monitor, ShieldCheck } from "../../data/icons";
 import Seo from "../../components/Seo/Seo";
-import SkillCard from "../../components/SkillCard/SkillCard";
-import SoftSkillCard from "../../components/SoftSkillCard/SoftSkillCard";
-import MethodologyCard from "../../components/MethodologyCard/MethodologyCard";
+import SkillCard from "./components/SkillCard/SkillCard";
+import SoftSkillCard from "./components/SoftSkillCard/SoftSkillCard";
+import MethodologyCard from "./components/MethodologyCard/MethodologyCard";
 
 import "./Skills.scss";
 
