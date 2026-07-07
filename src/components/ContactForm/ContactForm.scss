@@ -1,3 +1,6 @@
+@use "../../styles/abstracts/mixins" as *;
+@use "../../styles/abstracts/variables" as *;
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -20,7 +23,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.9rem;
     background: rgba(255, 255, 255, 0.035);
-    color: #ffffff;
+    color: $color-text-primary;
     font: inherit;
     font-size: 0.95rem;
     outline: none;
@@ -52,7 +55,7 @@
     border: none;
     border-radius: 0.85rem;
     background: linear-gradient(135deg, #b45cff, #7c3aed);
-    color: #ffffff;
+    color: $color-text-primary;
     font-weight: 700;
     cursor: pointer;
 
@@ -71,7 +74,7 @@
    Media Queries
 ========================================== */
 
-  @media (max-width: 768px) {
+  @include respond(mobile) {
     &__row {
       grid-template-columns: 1fr;
     }
