@@ -169,41 +169,41 @@
 ========================================== */
 
   @include respond(tablet) {
-  &__hero {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    &__hero {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      a {
+        @include flex-center;
+
+        min-height: 180px;
+        padding: 1.25rem;
+
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      svg {
+        margin-bottom: 0.8rem;
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        margin: 0 0 0.6rem;
+      }
+
+      p {
+        margin: 0;
+        max-width: 260px;
+      }
+    }
   }
-
-  &__cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-
-    a {
-      @include flex-center;
-
-      min-height: 180px;
-      padding: 1.25rem;
-
-      flex-direction: column;
-
-      text-align: center;
-    }
-
-    svg {
-      margin-bottom: 0.8rem;
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      margin: 0 0 0.6rem;
-    }
-
-    p {
-      margin: 0;
-      max-width: 260px;
-    }
-  }
-}
 
   @include respond(mobile) {
     padding: 3rem 1rem;
