@@ -2,10 +2,10 @@ import Seo from "../../components/Seo/Seo";
 
 import { projects } from "../../data/projects";
 
-import HomeHero from "./components/HomeHero/HomeHero";
-import HomeStats from "./components/HomeStats/HomeStats";
-import HomeFeaturedProjects from "./components/HomeFeaturedProjects/HomeFeaturedProjects";
-import HomeAbout from "./components/HomeAbout/HomeAbout";
+import HomeHero from "./_components/HomeHero/HomeHero";
+import HomeStats from "./_components/HomeStats/HomeStats";
+import HomeFeaturedProjects from "./_components/HomeFeaturedProjects/HomeFeaturedProjects";
+import HomeAbout from "./_components/HomeAbout/HomeAbout";
 
 import "./Home.scss";
 

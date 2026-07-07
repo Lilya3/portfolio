@@ -3,13 +3,13 @@ import Seo from "../../components/Seo/Seo";
 
 import { projects } from "../../data/projects";
 
-import ProjectHero from "./components/ProjectHero/ProjectHero";
-import ProjectInfoRow from "./components/ProjectInfoRow/ProjectInfoRow";
-import ProjectFeatureCard from "./components/ProjectFeatureCard/ProjectFeatureCard";
-import ProjectLearningList from "./components/ProjectLearningList/ProjectLearningList";
-import ProjectCodeBlock from "./components/ProjectCodeBlock/ProjectCodeBlock";
-import ProjectGallery from "./components/ProjectGallery/ProjectGallery";
-import ProjectLightbox from "./components/ProjectLightbox/ProjectLightbox";
+import ProjectHero from "./_components/ProjectHero/ProjectHero";
+import ProjectInfoRow from "./_components/ProjectInfoRow/ProjectInfoRow";
+import ProjectFeatureCard from "./_components/ProjectFeatureCard/ProjectFeatureCard";
+import ProjectLearningList from "./_components/ProjectLearningList/ProjectLearningList";
+import ProjectCodeBlock from "./_components/ProjectCodeBlock/ProjectCodeBlock";
+import ProjectGallery from "./_components/ProjectGallery/ProjectGallery";
+import ProjectLightbox from "./_components/ProjectLightbox/ProjectLightbox";
 
 import useProjectLightbox from "./hooks/useProjectLightbox";
 

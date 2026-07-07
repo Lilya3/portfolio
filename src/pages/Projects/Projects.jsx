@@ -3,8 +3,8 @@ import Seo from "../../components/Seo/Seo";
 
 import { projects } from "../../data/projects";
 
-import ProjectFilters from "./components/ProjectFilters/ProjectFilters";
-import ProjectListItem from "./components/ProjectListItem/ProjectListItem";
+import ProjectFilters from "./_components/ProjectFilters/ProjectFilters";
+import ProjectListItem from "./_components/ProjectListItem/ProjectListItem";
 
 import "./Projects.scss";
 
