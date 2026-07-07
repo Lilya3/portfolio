@@ -109,7 +109,7 @@ function Contact() {
           </a>
 
           <a
-            href="/public/cv/cv.pdf"
+            href="/cv/cv.pdf"
             download
             target="_blank"
             rel="noreferrer"

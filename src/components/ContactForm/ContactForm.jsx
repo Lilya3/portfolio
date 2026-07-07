@@ -27,7 +27,7 @@ function ContactForm() {
       `Nom : ${formData.name}\nEmail : ${formData.email}\n\nMessage :\n${formData.message}`
     );
 
-    window.location.href = `mailto:lilya.dev.web@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+    window.location.href = `mailto:alicelendormi@gmail.com?subject=${mailSubject}&body=${mailBody}`;
   };
 
   return (

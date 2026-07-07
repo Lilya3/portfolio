@@ -37,7 +37,7 @@ function Skills() {
             </span>
 
             <p>
-              Je continue à apprendre solidifier et à améliorer mes compétences chaque jour.
+              Je continue à apprendre, à solidifier et à améliorer mes compétences chaque jour.
             </p>
           </div>
         </div>
