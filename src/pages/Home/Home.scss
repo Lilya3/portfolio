@@ -55,9 +55,9 @@
   max-width: 650px;
   margin-top: 1.5rem;
 
-  color: $color-text-secondary;
+  @include text-muted(1.8);
+
   font-size: 1.15rem;
-  line-height: 1.8;
 }
 
 .home__actions {
@@ -177,9 +177,8 @@
 }
 
 .home__section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-between;
+  
   margin-bottom: 2.5rem;
 
   h2 {
