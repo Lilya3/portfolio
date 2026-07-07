@@ -1,7 +1,9 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 
 .project-details {
-  padding: 4rem 0 6rem;
+  @include page-spacing;
+
   overflow: hidden;
 }
 
@@ -49,19 +51,14 @@
   max-width: 620px;
   margin-top: 2rem;
 
-  color: $color-text-secondary;
-  line-height: 1.8;
+  @include text-muted(1.8);
 }
 
 .project-details__technologies {
+  @include tag-list;
+
   margin-top: 2rem;
-  padding: 0;
-
-  display: flex;
-  flex-wrap: wrap;
   gap: .75rem;
-
-  list-style: none;
 
   li {
     padding: .5rem .9rem;
@@ -153,9 +150,7 @@
 }
 
 .project-details__features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  @include auto-grid(220px, 1.5rem);
 }
 
 .project-details__feature-card {
@@ -185,21 +180,19 @@
   }
 
   p {
-    color: $color-text-secondary;
-    line-height: 1.6;
+    @include text-muted(1.6);
+
     font-size: .95rem;
   }
 }
 
 .project-details__feature-icon {
+  @include flex-center;
+
   width: 48px;
   height: 48px;
 
   flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   border-radius: 50%;
 
@@ -249,8 +242,7 @@
     display: flex;
     align-items: flex-start;
 
-    color: $color-text-secondary;
-    line-height: 1.6;
+    @include text-muted(1.6);
   }
 }
 
@@ -393,9 +385,7 @@
 }
 
 .project-details__gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  @include auto-grid(220px, 1.5rem);
 }
 
 .project-details__gallery-item {
@@ -422,9 +412,7 @@
     position: absolute;
     inset: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 
     background: rgba(0, 0, 0, 0.55);
     color: $color-text-primary;
@@ -454,9 +442,7 @@
 
   padding: 2rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   background: rgba($color-bg-primary, 0.92);
   backdrop-filter: blur(10px);
@@ -475,14 +461,12 @@
 
 .project-details__lightbox-close,
 .project-details__lightbox-nav {
+  @include flex-center;
+
   position: absolute;
 
   width: 48px;
   height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   border: 1px solid $color-border;
   border-radius: 50%;
@@ -516,7 +500,12 @@
 
 
 
-@media (max-width: 1024px) {
+/* ==========================================
+   Media Queries
+========================================== */
+
+
+@include respond(tablet) {
   .project-details__hero {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -536,11 +525,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .project-details {
-    padding: 3rem 0 4rem;
-  }
-
+@include respond(mobile) {
   .project-details__visual {
     order: 0;
   }
