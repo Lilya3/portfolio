@@ -1,3 +1,5 @@
+@use "../../styles/abstracts/mixins" as *;
+
 .contact-page {
   min-height: 100vh;
   padding: 5rem 1.5rem;
@@ -166,7 +168,7 @@
    Media Queries
 ========================================== */
 
-  @media (max-width: 1024px) {
+  @include respond(tablet) {
     .contact-page {
       &__hero {
         grid-template-columns: 1fr;
@@ -178,13 +180,12 @@
         gap: 1rem;
 
         a {
+          @include flex-center;
+
           min-height: 180px;
           padding: 1.25rem;
 
-          display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: center;
 
           text-align: center;
         }
@@ -206,7 +207,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond(mobile) {
     .contact-page {
       padding: 3rem 1rem;
 
