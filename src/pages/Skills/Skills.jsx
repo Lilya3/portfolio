@@ -6,6 +6,8 @@ import {
 import { Monitor, ShieldCheck } from "../../data/icons";
 import Seo from "../../components/Seo/Seo";
 import SkillCard from "../../components/SkillCard/SkillCard";
+import SoftSkillCard from "../../components/SoftSkillCard/SoftSkillCard";
+import MethodologyCard from "../../components/MethodologyCard/MethodologyCard";
 
 import "./Skills.scss";
 
@@ -71,20 +73,9 @@ function Skills() {
       </div>
 
       <div className="soft-skills">
-        {softSkills.map((skill) => {
-          const Icon = skill.icon;
-
-          return (
-            <article className="soft-skill-card" key={skill.title}>
-              <span className="soft-skill-card__icon">
-                <Icon />
-              </span>
-
-              <h3>{skill.title}</h3>
-              <p>{skill.description}</p>
-            </article>
-          );
-        })}
+        {softSkills.map((skill) => (
+          <SoftSkillCard skill={skill} key={skill.title} />
+        ))}
       </div>
 
       <div className="skills__section-title skills__section-title--spaced">
@@ -96,23 +87,9 @@ function Skills() {
       </div>
 
       <div className="methodology">
-        {methodologySteps.map((step, index) => {
-          const Icon = step.icon;
-
-          return (
-            <article className="methodology-card" key={step.title}>
-              <span className="methodology-card__icon">
-                <Icon />
-              </span>
-
-              <h3>
-                {index + 1}. {step.title}
-              </h3>
-
-              <p>{step.description}</p>
-            </article>
-          );
-        })}
+        {methodologySteps.map((step, index) => (
+          <MethodologyCard step={step} index={index} key={step.title} />
+        ))}
       </div>
     </section>
   </>
