@@ -1,0 +1,71 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.methodology-card {
+  position: relative;
+  min-height: 170px;
+  padding: 1.5rem;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  background: rgba($color-card, 0.65);
+  box-shadow: $shadow-card;
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+
+    color: $color-text-primary;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  p {
+    color: $color-text-muted;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  &::after {
+    content: "→";
+
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    transform: translateY(-50%);
+
+    color: $color-accent-hover;
+    font-size: 1.3rem;
+    text-shadow: 0 0 14px rgba($color-accent-hover, 0.8);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.methodology-card__icon {
+  display: inline-flex;
+
+  color: $color-accent-hover;
+  filter: drop-shadow(0 0 8px rgba($color-accent-hover, 0.65));
+
+  svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 1.75;
+  }
+}
+
+@include respond(desktop) {
+  .methodology-card::after {
+    display: none;
+  }
+}
+
+@include respond(mobile) {
+  .methodology-card::after {
+    display: none;
+  }
+}

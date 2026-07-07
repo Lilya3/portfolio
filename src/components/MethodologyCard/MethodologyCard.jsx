@@ -1,3 +1,5 @@
+import "./MethodologyCard.scss";
+
 function MethodologyCard({ step, index }) {
   const Icon = step.icon;
 

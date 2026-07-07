@@ -1,3 +1,5 @@
+import "./SkillCard.scss";
+
 function SkillCard({ group }) {
   const GroupIcon = group.icon;
 

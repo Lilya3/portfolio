@@ -1,3 +1,5 @@
+import "./SoftSkillCard.scss";
+
 function SoftSkillCard({ skill }) {
   const Icon = skill.icon;
 
