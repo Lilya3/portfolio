@@ -113,9 +113,6 @@
     gap: 2.5rem;
   }
 
-  .project-details__visual {
-    order: 0;
-  }
 }
 
 @include respond(mobile) {

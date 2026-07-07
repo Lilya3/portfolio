@@ -23,21 +23,21 @@
   }
 
   &__eyebrow {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  padding: 0.45rem 0.8rem;
+    display: inline-flex;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.8rem;
 
-  border: 1px solid rgba(168, 85, 247, 0.25);
-  border-radius: 0.75rem;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 0.75rem;
 
-  color: #b45cff;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+    color: #b45cff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 
-  background: rgba(168, 85, 247, 0.08);
-}
+    background: rgba(168, 85, 247, 0.08);
+  }
 
   h1 {
     max-width: 520px;
@@ -169,104 +169,100 @@
 ========================================== */
 
   @include respond(tablet) {
-    .contact-page {
-      &__hero {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      &__cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-
-        a {
-          @include flex-center;
-
-          min-height: 180px;
-          padding: 1.25rem;
-
-          flex-direction: column;
-
-          text-align: center;
-        }
-
-        svg {
-          margin-bottom: 0.8rem;
-          font-size: 1.8rem;
-        }
-
-        h3 {
-          margin: 0 0 0.6rem;
-        }
-
-        p {
-          margin: 0;
-          max-width: 260px;
-        }
-      }
-    }
+  &__hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
+  &__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    a {
+      @include flex-center;
+
+      min-height: 180px;
+      padding: 1.25rem;
+
+      flex-direction: column;
+
+      text-align: center;
+    }
+
+    svg {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin: 0 0 0.6rem;
+    }
+
+    p {
+      margin: 0;
+      max-width: 260px;
+    }
+  }
+}
+
   @include respond(mobile) {
-    .contact-page {
-      padding: 3rem 1rem;
+    padding: 3rem 1rem;
 
-      &__form-card {
-        padding: 1.3rem;
+    &__form-card {
+      padding: 1.3rem;
+    }
+
+    &__links {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+
+      > h2 {
+        margin-bottom: 1.25rem;
+        text-align: left;
+      }
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+
+      a {
+        min-height: auto;
+        padding: 1rem 1.1rem;
+
+        display: grid;
+        grid-template-columns: 2.2rem 1fr;
+        grid-template-areas:
+          "icon title"
+          "icon text";
+        column-gap: 0.9rem;
+        row-gap: 0.2rem;
+
+        align-items: center;
+        text-align: left;
+
+        &::after {
+          display: none;
+        }
       }
 
-      &__links {
-        margin-top: 3rem;
-        padding-top: 2.5rem;
-
-        > h2 {
-          margin-bottom: 1.25rem;
-          text-align: left;
-        }
+      svg {
+        grid-area: icon;
+        margin: 0;
+        font-size: 1.45rem;
       }
 
-      &__cards {
-        grid-template-columns: 1fr;
-        gap: 0.9rem;
+      h3 {
+        grid-area: title;
+        margin: 0;
+        font-size: 1rem;
+      }
 
-        a {
-          min-height: auto;
-          padding: 1rem 1.1rem;
-
-          display: grid;
-          grid-template-columns: 2.2rem 1fr;
-          grid-template-areas:
-            "icon title"
-            "icon text";
-          column-gap: 0.9rem;
-          row-gap: 0.2rem;
-
-          align-items: center;
-          text-align: left;
-
-          &::after {
-            display: none;
-          }
-        }
-
-        svg {
-          grid-area: icon;
-          margin: 0;
-          font-size: 1.45rem;
-        }
-
-        h3 {
-          grid-area: title;
-          margin: 0;
-          font-size: 1rem;
-        }
-
-        p {
-          grid-area: text;
-          margin: 0;
-          font-size: 0.85rem;
-          line-height: 1.45;
-        }
+      p {
+        grid-area: text;
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45;
       }
     }
   }

@@ -1,4 +1,4 @@
-import "./ProjectLightbox.scss"
+import "./ProjectLightbox.scss";
 
 function ProjectLightbox({
   image,

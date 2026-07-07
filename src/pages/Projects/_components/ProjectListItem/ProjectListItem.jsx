@@ -35,7 +35,7 @@ function ProjectListItem({ project }) {
 
           <Link
             to={`/projets/${project.slug}`}
-            className="projects__button projects__button--secondary"
+            className="projects__button"
             aria-label={`En savoir plus sur le projet ${project.title}`}
           >
             En savoir +

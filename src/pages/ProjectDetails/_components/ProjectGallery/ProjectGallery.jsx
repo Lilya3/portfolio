@@ -1,4 +1,4 @@
-import "./ProjectGallery.scss"
+import "./ProjectGallery.scss";
 
 function ProjectGallery({ images, projectTitle, onSelectImage }) {
   return (

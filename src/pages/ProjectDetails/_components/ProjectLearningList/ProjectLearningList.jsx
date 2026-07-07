@@ -1,4 +1,4 @@
-import "./ProjectLearningList.scss"
+import "./ProjectLearningList.scss";
 
 function ProjectLearningList({ learnings }) {
   return (
