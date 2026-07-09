@@ -99,31 +99,47 @@ Compétences mises en avant :
 Le projet est organisé afin de séparer clairement les pages, les composants globaux, les données et les styles.
 
 ```txt
-src/
-├─ assets/
-├─ components/
-│  ├─ ContactForm/
-│  ├─ Footer/
-│  ├─ Header/
-│  ├─ Layout/
-│  ├─ ProjectCard/
-│  └─ Seo/
-├─ data/
-│  ├─ icons.jsx
-│  ├─ projects.js
-│  └─ skills.js
-├─ pages/
-│  ├─ Contact/
-│  ├─ Home/
-│  ├─ ProjectDetails/
-│  ├─ Projects/
-│  └─ Skills/
-├─ styles/
-│  ├─ abstracts/
-│  ├─ base/
-│  └─ main.scss
-├─ App.jsx
-└─ main.jsx
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  │  ├─ ContactForm/
+│  │  ├─ Footer/
+│  │  ├─ Header/
+│  │  ├─ Layout/
+│  │  ├─ ProjectCard/
+│  │  └─ Seo/
+│  ├─ data/
+│  │  ├─ icons.jsx
+│  │  ├─ projects.js
+│  │  └─ skills.js
+│  ├─ pages/
+│  │  ├─ Contact/
+│  │  │  ├─ _components/
+│  │  │  ├─ Contact.jsx
+│  │  │  └─ Contact.scss
+│  │  ├─ Home/
+│  │  │  ├─ _components/
+│  │  │  ├─ Home.jsx
+│  │  │  └─ Home.scss
+│  │  ├─ ProjectDetails/
+│  │  │  ├─ _components/
+│  │  │  ├─ hooks/
+│  │  │  ├─ ProjectDetails.jsx
+│  │  │  └─ ProjectDetails.scss
+│  │  ├─ Projects/
+│  │  │  ├─ _components/
+│  │  │  ├─ Projects.jsx
+│  │  │  └─ Projects.scss
+│  │  └─ Skills/
+│  │     ├─ _components/
+│  │     ├─ Skills.jsx
+│  │     └─ Skills.scss
+│  ├─ styles/
+│  │  ├─ abstracts/
+│  │  ├─ base/
+│  │  └─ main.scss
+│  ├─ App.jsx
+│  └─ main.jsx
 ```
 
 Les composants réutilisables globalement sont placés dans `src/components`.
