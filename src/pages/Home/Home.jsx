@@ -15,8 +15,8 @@ function Home() {
   return (
     <>
       <Seo
-        title="Accueil | Lilya - Développeuse Front-End React"
-        description="Portfolio de Lilya, développeuse front-end React. Découvrez ses projets web, ses compétences et son profil."
+        title="Accueil | Lilya3 - Développeuse Front-End React"
+        description="Portfolio de Lilya3, développeuse front-end React. Découvrez ses projets web, ses compétences et son profil."
       />
 
       <section className="home">
