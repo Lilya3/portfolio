@@ -1,6 +1,6 @@
 # Portfolio - Lilya3
 
-Portfolio professionnel réalisé dans le cadre du projet 12 de la formation Développeur Web / Intégrateur Web OpenClassrooms.
+Portfolio professionnel réalisé dans le cadre du projet 11 de la formation Développeur Web / Intégrateur Web OpenClassrooms.
 
 Ce portfolio présente mon profil, mes compétences techniques, mes projets de formation et mes moyens de contact.  
 L’objectif est de proposer une vitrine professionnelle claire, responsive, accessible et maintenable.
