@@ -40,8 +40,8 @@ function Projects() {
   return (
     <>
       <Seo
-        title="Projets | Lilya - Développeuse Front-End React"
-        description="Découvrez les projets web réalisés par Lilya : applications React, intégration web, optimisation SEO et interfaces modernes."
+        title="Projets | Lilya3 - Développeuse Front-End React"
+        description="Découvrez les projets web réalisés par Lilya3 : applications React, intégration web, optimisation SEO et interfaces modernes."
       />
 
       <section className="projects">

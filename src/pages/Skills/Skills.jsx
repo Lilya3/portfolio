@@ -16,8 +16,8 @@ function Skills() {
 
     <>
       <Seo
-        title="Compétences | Lilya - Développeuse Front-End React"
-        description="Découvrez les compétences techniques de Lilya en développement front-end : React, JavaScript, Sass, accessibilité, responsive design et méthodologie projet."
+        title="Compétences | Lilya3 - Développeuse Front-End React"
+        description="Découvrez les compétences techniques de Lilya3 en développement front-end : React, JavaScript, Sass, accessibilité, responsive design et méthodologie projet."
       />
 
     <section className="skills">

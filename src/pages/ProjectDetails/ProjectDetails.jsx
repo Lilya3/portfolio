@@ -36,8 +36,8 @@ function ProjectDetails() {
   return (
     <>
       <Seo
-        title={`${project.title} | Lilya - Projet Front-End`}
-        description={`Découvrez le projet ${project.title}, réalisé par Lilya dans le cadre de son portfolio de développeuse front-end React.`}
+        title={`${project.title} | Lilya3 - Projet Front-End`}
+        description={`Découvrez le projet ${project.title}, réalisé par Lilya3 dans le cadre de son portfolio de développeuse front-end React.`}
       />
 
       <section className="project-details">
