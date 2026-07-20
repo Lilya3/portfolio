@@ -10,8 +10,8 @@ function Contact() {
   return (
     <>
       <Seo
-        title="Contact | Lilya - Développeuse Front-End React"
-        description="Contactez Lilya pour échanger autour d'une opportunité professionnelle, d'un projet web ou d'une collaboration en développement front-end."
+        title="Contact | Lilya3 - Développeuse Front-End React"
+        description="Contactez Lilya3 pour échanger autour d'une opportunité professionnelle, d'un projet web ou d'une collaboration en développement front-end."
       />
 
       <section className="contact-page" aria-labelledby="contact-title">
